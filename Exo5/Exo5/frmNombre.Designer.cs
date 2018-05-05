@@ -42,6 +42,7 @@
             this.btnActualiser.TabIndex = 0;
             this.btnActualiser.Text = "Actualiser";
             this.btnActualiser.UseVisualStyleBackColor = true;
+            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
             // 
             // btnFermer
             // 
@@ -80,6 +81,7 @@
             this.Controls.Add(this.btnActualiser);
             this.Name = "frmNombre";
             this.Text = "frmNombre";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNombre_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -20,9 +20,9 @@ namespace Exo5
         /// <summary>
         /// nombre aléatoire tiré par NextDouble
         /// </summary>
-        internal double nombre;
+        public double nombre; //amélioration 2: rendre public les 2 variables nombre et chrono
 
-        internal int chrono; //variable niveau pour stocker les valeurs du Tick du timer
+        public int chrono; //variable niveau pour stocker les valeurs du Tick du timer
                             //par intervalle d'1 seconde (1000millisecondes)
         /// <summary>
         /// Constructeur par défaut du frmExo5: génère un nombre aléatoire

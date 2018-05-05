@@ -69,6 +69,7 @@
             this.btnActualiser.TabIndex = 3;
             this.btnActualiser.Text = "Actualiser";
             this.btnActualiser.UseVisualStyleBackColor = true;
+            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
             // 
             // frmChrono
             // 
@@ -82,6 +83,7 @@
             this.Name = "frmChrono";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "frmChrono";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChrono_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

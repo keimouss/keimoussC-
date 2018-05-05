@@ -53,7 +53,8 @@ namespace Exo5
             if(this.frmC == null)
             {
                 //instancie une form secondaire frmChrono et l'affiche dans le conteneur
-                frmC = new frmChrono();
+                //instancie la form : amélioration 1&2
+                frmC = new frmChrono(this.frmPrinc);
                 frmC.MdiParent = this;
                 frmC.Show();
             }
@@ -72,7 +73,8 @@ namespace Exo5
             if(this.frmR == null)
             {
                 //instancie une form secondaire frmNombre et l'affiche dans le conteneur
-                frmR = new frmNombre();
+                //instancie la form : amélioration 1&2 - surcharge frmNombre(this....)
+                frmR = new frmNombre(this.frmPrinc);
                 frmR.MdiParent = this;
                 frmR.Show();
             }
@@ -83,7 +85,25 @@ namespace Exo5
             }
             //recopie la valeur courante
             this.frmR.txtNombre.Text = this.nombreM.ToString();
+
             
+           
+        }
+        //Amélioration 2: procédure de libération de la mémoire à la fermeture de fenêtre
+        //Chrono et Nombre
+        /// <summary>
+        /// Libère la ref au frmChrono
+        /// </summary>
+        public void fermeChrono()
+        {
+            this.frmC = null; // libère la ref au form Chrono
+        }
+        /// <summary>
+        /// Libère la ref au frmNombre
+        /// </summary>
+        public void fermeNombre()
+        {
+            this.frmR = null; //libère la ref au form Nombre
         }
     }
 }
